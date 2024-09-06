@@ -1,0 +1,297 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: black;
+    color: white;
+    overflow:hidden;//later on whenever required for smthng ele then we can activate it by scroll or smthn//
+  }
+  .main{
+display:flex;
+height:100vh;
+padding:0.5rem;
+  }
+  .sidebar{
+    background-color: black; 
+    width:340px;
+    border-radius: 1rem;//1rem=16px//
+    margin-right: 0.5rem; //space b/w sidebar &main-content//
+  }
+  .main_content{
+    background-color: #121212; /*grey color code*/
+    flex:1; //means occupies total remaining space in whole flex/container after all remaining ele or divs occupies their required space acc to their content//
+    border-radius: 1rem;/*1rem=16px*/
+    overflow: auto; /*scroll bar will visible if it is required i.e, more matter is there to display*/
+    padding:0 1.5rem 0 1.5rem;
+  }
+  .music_player{
+    background-color:#121212; /*grey color code*/
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:95px;
+  }
+  a{
+    text-decoration: none;
+    color:#fff; /*white color*/
+  }
+  .nav{
+  background-color: #121212; /*grey color code*/
+  border-radius: 1rem;
+  display:flex; /*makes both home,search in a same line*/
+  flex-direction: column; /*so to come in vertical we use this*/
+  justify-content: center;
+  height:100px;
+  padding:0.5rem 0.75rem; /*equals 12px 8px we used rem bcoz we need responsive website even for small screen . As pixels can't be accodomated for small screen we used rem*/
+ }
+  .nav-option{
+    line-height: 2.5rem; /*= 40px*/
+    opacity:0.7;
+    padding:0.5rem 0.75rem;
+  }
+  .nav-option:hover{
+    opacity:1;
+  }
+  .nav-option i{
+    font-size: 1.25rem;
+  }
+  .nav-option a{
+    font-size:1rem;
+    margin-left:1rem; /* to get space b/w icon & text like home or search */
+
+  }
+  .library{
+    background-color: #121212; /*grey color code*/
+  border-radius: 1rem;
+  height:100%;
+  margin-top:0.5rem;
+  padding:0.5rem 0.75rem;
+
+  }
+  .options{
+    display:flex; /* to get all in same line*/
+justify-content:space-between; /*to make icons at rhs & library at lhs side*/
+align-items: center;
+  }
+  .lib-option img{
+    height:1.25rem; /*1.25 rem for height,width bcoz in nav-option i we gave font-size:1.24rem*/
+
+    width:1.25rem;
+  }
+  .icons{
+    font-size:1.25rem;
+    display:flex;
+  }
+  .icons i{
+    opacity:0.7;
+    margin-right: 1rem;
+  }
+  .icons i:hover{
+opacity:1;
+  }
+  .box{
+    background-color: #232323; /*light grrey color*/
+    height:8rem;
+    border-radius: 0.75rem;
+    margin:0.75rem 0 1.75rem 0;
+    padding:0.75rem 1rem;
+  }
+  .box-p1{
+    font-size:1rem;
+    font-weight:500;
+  }
+  .box-p2{
+    font-size:0.85rem;
+    opacity:0.9;
+  }
+  .badge{
+    background-color: #fff;
+    border: none;
+    border-radius: 100px; /*100% will make oval shape */
+ padding:0.25rem 1rem;
+ font-weight:700;
+ margin-top: 0.5rem;
+  }
+  .dark-badge{
+    background-color: #000;
+    color:#fff;
+  }
+  .sticky-nav{
+    position:sticky;
+    top:0;
+    background-color:#121212;
+    display:flex;
+    justify-content: space-between;
+    padding:1rem 0 1rem 0;
+    align-items: center;
+    z-index: 10;
+  }
+  .sticky-nav-icons{
+    margin-left:0.75rem;
+  }
+.sticky-nav-options{
+display:flex;
+justify-content: center;
+align-items:center;
+  }
+  .nav-item{
+margin-right:1rem;
+  }
+  @media(max-width:1000px){
+    .hide{
+      display:none;
+    }
+  }
+  .card{
+    background-color: #232323;
+    width:150px;
+    border-radius:0.5rem;
+    padding:1rem;
+    margin-left:1.5rem;
+    margin-top:1rem;
+  }
+  .cards-container{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .card-img{
+    width:100%;
+    border-radius:0.5rem;
+  }
+  .card-title{
+    font-weight:600;
+  }
+  .card-info{
+    font-size:0.8rem;
+    opacity:0.8;
+  }
+  .footer{
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .line{
+    width:90%;
+    height:30%;
+    border-top:1px solid white;
+    opacity:0.4;
+  
+  }
+  .music_player{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+  .album{
+    width:25%;
+    display:flex;
+    justify-content:center;
+   /* align-items: center;*/
+  }
+  .player{
+    width:50%;
+  }
+  .controls{
+    width:25%;
+    color:#fff;
+    opacity:1;
+    font-size:1.5rem;
+    font-weight:500;
+   
+  }
+  .player-controls{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
+  .player-control-icon{
+    height:0.9rem;
+    margin:1.5rem;
+    opacity:0.7;
+  }
+  .player-control-icon:hover{
+    opacity:1;
+  }
+  .playback-bar{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+  }
+  .progress-bar{
+    width:70%;
+    appearance:none; /*removes by default styling */
+    background-color: transparent;
+    cursor:pointer; /*makes cursor as hand symbol*/
+  }
+/*to know about progress bar : https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html*/
+.progress-bar::-webkit-slider-runnable-track{
+  background-color: #ddd;
+  border-radius:100px;
+  height:0.3rem;
+}
+.progress-bar::-webkit-slider-thumb{
+  appearance: none;
+  height: 1rem; /*instead of in pixels we r using in rem where 1rem=16px and rem is for responsiveness*/
+  width: 1rem;
+  background-color: #1bd760;
+  border-radius: 50%;
+  margin-top: -5px;
+}
+.album-pic{
+  height:0.7rem;
+}
+.matter{
+ margin-left: 1rem;
+ font-size: 0.8rem;
+ font-weight:500;
+}
+.two:hover{
+  font-weight:900;
+  text-decoration: underline;
+}
+.album-icons{
+  height:0.1rem;
+}
+.i1{
+  margin-left: 1.5rem;
+  margin-bottom: 3.8rem;
+}
+.i2{
+  height:2rem;
+  width:2rem;
+  margin-left: 1.65rem;
+  margin-bottom: 3.8rem;
+}
+.control-icons{
+  display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.control-icon{
+  height:2rem;
+  width:2rem;
+  margin:0.5rem;
+  opacity:1;
+  font-size:5rem;
+  font-weight: 600;
+    
+}
+.volume-bar{
+  height: 1rem; /*instead of in pixels we r using in rem where 1rem=16px and rem is for responsiveness*/
+  width: 20%;
+ /* border-radius: 100%;*/
+  background-color: transparent;
+  /*cursor:pointer; makes cursor as hand symbol*/
+}
+.volume-bar::-webkit-slider-runnable-track{
+  background-color: #fff;
+  border-radius:100px;
+  height:0.3rem;
+}
+volume-bar::-webkit-slider-thumb{
+  appearance: none;
+  height: 1rem; /*instead of in pixels we r using in rem where 1rem=16px and rem is for responsiveness*/
+  width: 1rem;
+ background-color: blue;
+  border-radius: 50%;
+ 
+}
